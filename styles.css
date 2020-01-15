@@ -25,6 +25,7 @@ body {
 .cell {  
   align-items: center;
   border: 1px solid black;
+  cursor: pointer;
   display: flex;
   height: var(--cell-size);
   justify-content: center;
@@ -32,7 +33,7 @@ body {
   width: var(--cell-size);
 }
 
-.cell:first-child,
+.cell:first-child,  
 .cell:nth-child(2),
 .cell:nth-child(3) {
   border-top: none;
@@ -80,10 +81,19 @@ body {
   background-color: white;
 }
 
+.board.x .cell:hover {
+  
+}
+
 .cell.x::before {
   transform: rotate(45deg);
 }
 
 .cell.x::after {
   transform: rotate(-45deg);
+}
+
+.cell.x,
+.cell.circle {
+  cursor: not-allowed;
 }
