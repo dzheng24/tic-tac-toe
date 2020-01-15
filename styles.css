@@ -61,7 +61,26 @@ body {
   width: calc(var(--mark-size) * .15)
 }
 
-.cell.x::before{
+.cell.circle::before,
+.cell.circle::after {
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+}
+
+.cell.circle::before {
+  height: var(--mark-size);
+  width: var(--mark-size);
+  background-color: black;
+}
+
+.cell.circle::after {
+  height: calc(var(--mark-size) * .7);
+  width: calc(var(--mark-size) * .7);
+  background-color: white;
+}
+
+.cell.x::before {
   transform: rotate(45deg);
 }
 
