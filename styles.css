@@ -54,7 +54,9 @@ body {
 }
 
 .cell.x::before,
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
   background-color: black;
   content: '';
   height: var(--mark-size);
@@ -81,15 +83,23 @@ body {
   background-color: white;
 }
 
-.board.x .cell:hover {
-  
+.cell.x::before,
+.cell.x::after {
+  background-color:black;
 }
 
-.cell.x::before {
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+  background-color: lightgray;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
   transform: rotate(45deg);
 }
 
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
   transform: rotate(-45deg);
 }
 
